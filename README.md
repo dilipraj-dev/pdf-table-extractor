@@ -41,12 +41,6 @@ If Ghostscript is not installed, the program may fail to extract tables.
    C:\Program Files\gs\gs10.03.0\bin
    ```
 
-4. Verify installation:
-
-   ```
-   gs --version
-   ```
-
 ---
 
 ### 🐧 Linux Installation
@@ -61,6 +55,22 @@ sudo apt install ghostscript
 
 ```
 brew install ghostscript
+```
+
+---
+
+### Verify installation
+
+Windows:
+
+```
+gswin64c --version
+```
+
+Linux/Mac:
+
+```
+gs --version
 ```
 
 ---
