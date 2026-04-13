@@ -8,6 +8,69 @@ Develop a Python-based solution to extract structured table data from financial 
 
 ---
 
+## 🐍 Python Version Requirement
+
+Python 3.10 or 3.11 is recommended for compatibility with all dependencies.
+
+Using newer versions (e.g., Python 3.12+) may cause installation or runtime issues with some libraries.
+
+---
+
+## ⚠️ Additional System Requirement
+
+### Ghostscript (Required for Camelot)
+
+This project uses Camelot for table extraction, which requires Ghostscript to be installed on the system.
+
+If Ghostscript is not installed, the program may fail to extract tables.
+
+---
+
+### 🪟 Windows Installation
+
+1. Download Ghostscript from:
+   https://www.ghostscript.com/download/gsdnld.html
+
+2. Install the application
+
+3. Add Ghostscript to system PATH
+
+   Example path:
+
+   ```
+   C:\Program Files\gs\gs10.03.0\bin
+   ```
+
+4. Verify installation:
+
+   ```
+   gs --version
+   ```
+
+---
+
+### 🐧 Linux Installation
+
+```
+sudo apt install ghostscript
+```
+
+---
+
+### 🍎 Mac Installation
+
+```
+brew install ghostscript
+```
+
+---
+
+### ✅ Important Note
+
+Ensure Ghostscript is properly installed before running the project to avoid runtime errors with Camelot.
+
+---
+
 ## 🏗️ High-Level Design
 
 ```
@@ -111,7 +174,29 @@ cd pdf-table-extractor
 
 ---
 
-### 2. Install Dependencies
+### 2. Create Virtual Environment (Recommended)
+
+```
+python -m venv venv
+```
+
+Activate environment:
+
+* **Windows:**
+
+```
+venv\Scripts\activate
+```
+
+* **Mac/Linux:**
+
+```
+source venv/bin/activate
+```
+
+---
+
+### 3. Install Dependencies
 
 ```
 pip install -r requirements.txt
@@ -119,7 +204,7 @@ pip install -r requirements.txt
 
 ---
 
-### 3. Add Input PDFs
+### 4. Add Input PDFs
 
 Place your PDF files inside:
 
@@ -129,7 +214,7 @@ input_pdfs/
 
 ---
 
-### 4. Run the Project
+### 5. Run the Project
 
 ```
 python main.py
@@ -137,7 +222,7 @@ python main.py
 
 ---
 
-### 5. Example Execution
+### 6. Example Execution
 
 ```
 Available PDFs:
@@ -157,7 +242,7 @@ Enter page number: all
 
 ---
 
-### 6. Check Output
+### 7. Check Output
 
 Generated files will be stored in:
 
